@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+
+    <base href="{{DECKDECKGO_BASE_HREF}}"/>
+
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self';
+    img-src 'self' data: https://deckdeckgo.com https://firebasestorage.googleapis.com/v0/b/deckdeckgo-studio-prod.appspot.com/ https://firebasestorage.googleapis.com/v0/b/deckdeckgo-studio-beta.appspot.com/ https://www.gstatic.com https://lh5.googleusercontent.com https://pbs.twimg.com https://media.giphy.com https://media.tenor.com/ https://images.unsplash.com/ https://*.githubusercontent.com/ https://*.googleusercontent.com/  https://*.ytimg.com/;
+    style-src 'self' 'unsafe-inline' https://cdn.firebase.com https://fonts.googleapis.com;
+    font-src 'self' https://fonts.googleapis.com https://fonts.gstatic.com;
+    script-src 'self' blob: {{DECKDECKGO_EXTRA_SHAS}} https://cdn.firebase.com https://apis.google.com https://unpkg.com/prismjs@latest/;
+    connect-src 'self' https://deckdeckgo.com/ wss://api.deckdeckgo.com/ https://firebasestorage.googleapis.com/v0/b/deckdeckgo-studio-prod.appspot.com/ https://firebasestorage.googleapis.com/v0/b/deckdeckgo-studio-beta.appspot.com/ https://www.googleapis.com https://securetoken.googleapis.com https://firestore.googleapis.com https://raw.githubusercontent.com/PrismJS/ https://raw.githubusercontent.com/deckgo/ https://api.tenor.com/;
+    frame-src https:">
+
+    <title>{{DECKDECKGO_TITLE}}</title>
+
+    <meta property="og:site_name" content="{{DECKDECKGO_TITLE}}">
+    <meta property="og:title" content="{{DECKDECKGO_TITLE}}">
+
+    <meta name="author" content="{{DECKDECKGO_AUTHOR}}">
+
+    <meta name="description" content="{{DECKDECKGO_DESCRIPTION}}">
+
+    <meta property="og:description" content="{{DECKDECKGO_DESCRIPTION}}">
+    <meta property="og:site_name" content="{{DECKDECKGO_TITLE}}">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://beta.deckdeckgo.io{{DECKDECKGO_BASE_HREF}}">
+    <meta property="og:image" content="https://firebasestorage.googleapis.com/v0/b/deckdeckgo-studio-prod.appspot.com/o/{{DECKDECKGO_USER_ID}}%2Fpresentations%2F{{DECKDECKGO_DECKNAME}}%2Fdeckdeckgo.png?alt=media">
+    <meta property="og:image:type" content="image/png">
+
+    <meta name="twitter:site" content="@deckdeckgo">
+    <meta name="twitter:title" content="{{DECKDECKGO_TITLE}}">
+    <meta name="twitter:description" content="{{DECKDECKGO_DESCRIPTION}}">
+    <meta name="twitter:image:src" content="https://firebasestorage.googleapis.com/v0/b/deckdeckgo-studio-prod.appspot.com/o/{{DECKDECKGO_USER_ID}}%2Fpresentations%2F{{DECKDECKGO_DECKNAME}}%2Fdeckdeckgo.png?alt=media">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="{{DECKDECKGO_BASE_HREF}}assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{DECKDECKGO_BASE_HREF}}assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{DECKDECKGO_BASE_HREF}}assets/favicon/favicon-16x16.png">
+    <link rel="shortcut icon" href="{{DECKDECKGO_BASE_HREF}}assets/favicon/favicon.ico">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-config" content="{{DECKDECKGO_BASE_HREF}}assets/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', async () => {
+                try {
+                    await navigator.serviceWorker.register('service-worker.js');
+                } catch (e) {
+                    console.warn('No service worker registered');
+                }
+            });
+        }
+    </script>
+
+    <script>
+        window.ROOM_NAME = '{{DECKDECKGO_TITLE}}';
+    </script>
+
+    <link rel="manifest" href="manifest.json">
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="msapplication-tap-highlight" content="no">
+
+    {{DECKDECKGO_HEAD_EXTRA}}
+
+    <style>
+        :root {
+            background: #ffffff;
+            --ion-background-color: #ffffff;
+        }
+
+        deckgo-deck {
+            color: black;
+            --color: black;
+            --ion-text-color: black;
+        }
+
+        /* Until Web Components are loaded, don't display content */
+        body {
+            background: #ffffff;
+        }
+
+        ion-app.loading, ion-app.loading a {
+            color: transparent;
+        }
+
+        ion-app.loading a {
+            color: transparent;
+        }
+
+        ion-app.loading {
+            display: none;
+        }
+    </style>
+
+</head>
+<body>
+
+<ion-app class="loading">
+    <ion-content force-overscroll="false" scroll-y="false">
+
+        <deckgo-deck id="slider">
+
+            <button slot="actions" style="color: inherit; outline: none; background: transparent; border-color: transparent; font-size: 1.6rem;"><ion-icon src="{{DECKDECKGO_BASE_HREF}}assets/icons/ionicons/more.svg" aria-label="More options"></ion-icon></button>
+
+        </deckgo-deck>
+
+        <deckgo-remote></deckgo-remote>
+
+    </ion-content>
+
+    <ion-fab vertical="bottom" horizontal="end" slot="fixed" id="navigation">
+        <button id="play" class="navigation ion-activatable" style="display: none;">
+            <ion-ripple-effect></ion-ripple-effect>
+            <ion-icon src="{{DECKDECKGO_BASE_HREF}}assets/icons/ionicons/play.svg" aria-label="Play video" style="font-size: 1.4em;"></ion-icon>
+        </button>
+
+        <button id="pause" class="navigation ion-activatable" style="display: none;">
+            <ion-ripple-effect></ion-ripple-effect>
+            <ion-icon src="{{DECKDECKGO_BASE_HREF}}assets/icons/ionicons/pause.svg" aria-label="Pause video" style="font-size: 1.4em;"></ion-icon>
+        </button>
+
+        <button id="previous" class="navigation ion-activatable" aria-label="Previous slide">
+            <ion-ripple-effect></ion-ripple-effect>
+            <ion-icon src="{{DECKDECKGO_BASE_HREF}}assets/icons/ionicons/arrow-back.svg" aria-label="Previous slide" style="font-size: 1.4em;"></ion-icon>
+        </button>
+
+        <button id="next" class="navigation ion-activatable" aria-label="Next slide">
+            <ion-ripple-effect></ion-ripple-effect>
+            <ion-icon src="{{DECKDECKGO_BASE_HREF}}assets/icons/ionicons/arrow-forward.svg" aria-label="Next slide" style="font-size: 1.4em;"></ion-icon>
+        </button>
+
+        <button id="slidePicker" class="navigation ion-activatable" aria-label="Jump to a particular slide">
+            <ion-ripple-effect></ion-ripple-effect>
+            <ion-icon src="{{DECKDECKGO_BASE_HREF}}assets/icons/ionicons/list.svg" aria-label="Jump to a particular slide" style="font-size: 1.4em;"></ion-icon>
+        </button>
+
+        <button id="fullScreen" class="navigation ion-activatable hide-on-mobile" aria-label="Full screen">
+            <ion-ripple-effect></ion-ripple-effect>
+            <ion-icon src="{{DECKDECKGO_BASE_HREF}}assets/icons/ionicons/expand.svg" aria-label="Full screen" style="font-size: 1.4em;"></ion-icon>
+        </button>
+
+        <button id="remote" class="navigation ion-activatable">
+            <ion-ripple-effect></ion-ripple-effect>
+            <ion-icon src="https://deckdeckgo.com/assets/icons/ionicons/phone-portrait.svg" aria-label="Open Remote" style="font-size: 1.4em;"></ion-icon>
+        </button>
+    </ion-fab>
+
+    <!-- Ionic components anchors -->
+    <ion-popover-controller></ion-popover-controller>
+    <ion-modal-controller></ion-modal-controller>
+    <ion-alert-controller></ion-alert-controller>
+
+    <web-social-share show="false" style="--web-social-share-backdrop-opacity: 0.5;">
+        <ion-icon src="{{DECKDECKGO_BASE_HREF}}assets/icons/ionicons/twitter.svg" aria-label="Twitter" slot="twitter" style="color: #00aced; font-size: 1.6rem; display: block;"></ion-icon>
+        <ion-icon src="{{DECKDECKGO_BASE_HREF}}assets/icons/ionicons/linkedin.svg" aria-label="Linkedin" slot="linkedin" style="color: #0077b5; font-size: 1.6rem; display: block;"></ion-icon>
+        <ion-icon src="{{DECKDECKGO_BASE_HREF}}assets/icons/ionicons/mail.svg" aria-label="Email" slot="email" style="color: #ff8ea3; font-size: 1.6rem; display: block;"></ion-icon>
+        <ion-icon src="{{DECKDECKGO_BASE_HREF}}assets/icons/ionicons/whatsapp.svg" aria-label="WhatsApp" slot="whatsapp" style="color: #25D366; font-size: 1.6rem; display: block;"></ion-icon>
+        <ion-icon src="{{DECKDECKGO_BASE_HREF}}assets/icons/ionicons/hackernews.svg" aria-label="Hacker News" slot="hackernews" style="color: #ff6000; font-size: 1.6rem; display: block;"></ion-icon>
+    </web-social-share>
+</ion-app>
+
+<noscript>
+    Please enable Javascript to access this presentation.
+</noscript>
+
+</body>
+</html>
