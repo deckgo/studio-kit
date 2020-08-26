@@ -15,11 +15,11 @@
 
 ## Credits
 
-This deck has been developed with [DeckDeckGo], the web open source editor for presentations.
+✏️ This deck has been developed with [DeckDeckGo], the web open source editor for presentations.
 
 ## Build
 
-To build this presentation, proceed as following:
+⚙️ To build this presentation, proceed as following:
 
 ```
 git clone {{DECKDECKGO_GITHUB_REPO_URL}}
