@@ -25,7 +25,7 @@
 git clone {{DECKDECKGO_GITHUB_REPO_URL}}
 cd {{DECKDECKGO_GITHUB_REPO_NAME}}
 npm install
-npm run start
+npm run build
 ```
 
 ## License
