@@ -16,7 +16,7 @@
 
 ## Getting Started
 
-💻 To get the source code of this presentation, clone this repo. Install its dependencies if you wish to `build` or `start` it on your device.
+💻 To get the source code of this presentation, clone this repo. Install its dependencies if you wish to build or start it on your device.
 
 ```
 git clone {{DECKDECKGO_GITHUB_REPO_URL}}
