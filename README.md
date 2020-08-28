@@ -5,7 +5,6 @@
 ## Table of contents
 
 - [Slides](#slides)
-- [Getting Started](#getting-started)
 - [Usage](#usage)
 - [Credits](#credits)
 - [License](#license)
@@ -14,9 +13,9 @@
 
 🔗 [https://beta.deckdeckgo.io{{DECKDECKGO_BASE_HREF}}](https://beta.deckdeckgo.io{{DECKDECKGO_BASE_HREF}})
 
-## Getting Started
+## Usage
 
-💻 To get the source code of this presentation, clone this repo. Install its dependencies if you wish to build or start it on your device.
+💻 To get started locally with this presentation, clone this repo and install its dependencies.
 
 ```
 git clone {{DECKDECKGO_GITHUB_REPO_URL}}
@@ -24,9 +23,7 @@ cd {{DECKDECKGO_GITHUB_REPO_NAME}}
 npm install
 ```
 
-## Usage
-
-▶️ To start this presentation locally, run the following command line:
+▶️ To start it locally, run the following command line:
 
 ```
 npm run start
