@@ -1,3 +1,10 @@
+# 5.0.0
+
+### Features
+
+- introduce animation direction `vertical` and `papyrus`
+- isMobile has been deprecated as a deck method
+
 # 4.0.0
 
 ### Breaking Changes
