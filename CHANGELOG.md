@@ -1,3 +1,9 @@
+# 5.1.0
+
+### Features
+
+prompt user to reload when a new version is available
+
 # 5.0.0
 
 ### Features
