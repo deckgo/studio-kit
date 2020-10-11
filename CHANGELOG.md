@@ -1,3 +1,9 @@
+# 5.2.0
+
+### Features
+
+- import `@deckdeckgo/word-cloud` component
+
 # 5.1.0
 
 ### Features
