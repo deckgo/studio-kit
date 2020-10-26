@@ -10,7 +10,6 @@ import './css/img.css';
 import './css/button.css';
 
 import '../node_modules/@deckdeckgo/deck-utils/css/deck.css';
-import '../node_modules/@deckdeckgo/deck-utils/css/fullscreen.css';
 
 import './scripts/embedded.js';
 import './scripts/buttons.js';
