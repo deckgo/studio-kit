@@ -1,3 +1,10 @@
+# 6.0.0
+
+### Breaking Changes
+
+- the base font size is responsive and calculated according window height and applied automatically on the deck
+- Webpack v5
+
 # 5.2.0
 
 ### Features
