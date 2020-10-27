@@ -1,3 +1,9 @@
+# 6.1.0
+
+### Features
+
+- updated component social for Medium
+
 # 6.0.0
 
 ### Breaking Changes
