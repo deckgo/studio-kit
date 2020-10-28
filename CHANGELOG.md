@@ -1,3 +1,7 @@
+# 6.2.0
+
+- build: reveal standalone component
+
 # 6.1.0
 
 ### Features
