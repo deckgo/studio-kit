@@ -1,6 +1,8 @@
 # 6.2.0
 
-- build: reveal standalone component
+### Refactoring
+
+- reveal standalone component
 
 # 6.1.0
 
