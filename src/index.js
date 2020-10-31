@@ -1,32 +1,11 @@
 import '@ionic/core/css/ionic.bundle.css';
 
 import './css/variables.css';
-import './css/theme.css';
-import './css/modal.css';
-import './css/popover.css';
-import './css/print.css';
-import './css/alert.css';
-import './css/img.css';
-import './css/button.css';
 
 import '../node_modules/@deckdeckgo/deck-utils/css/deck.css';
+import '../node_modules/@deckdeckgo/kit/css/kit.css';
 
-import './scripts/embedded.js';
-import './scripts/buttons.js';
-import './scripts/loading.js';
-import './scripts/slider.js';
-import './scripts/sliderJumpTo.js';
-import './scripts/modalNotes.js';
-import './scripts/remoteControl.js';
-import './scripts/menu.js';
-import './scripts/fullscreen.js';
-import './scripts/actionPlayPause.js';
-import './scripts/remotePopover.js';
-
-import {initActions} from './scripts/actions.js';
-
-import {initReload} from "./scripts/reload";
-initReload();
+import {initReload, initButtons, initFullscreen, initActions, postLoading, initRemote} from "@deckdeckgo/kit";
 
 import { defineCustomElements as ionicElements } from '@ionic/core/loader';
 ionicElements();
@@ -102,4 +81,5 @@ deckDeckGoElements().then(async () => {
     });
 });
 
+initReload();
 initButtons();
