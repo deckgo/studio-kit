@@ -114,52 +114,60 @@
 <body>
 
 <ion-app class="loading">
-    <ion-content force-overscroll="false">
 
-        <deckgo-deck id="slider">
+    <ion-menu id="ion-menu" side="start" type="overlay" swipeGesture="false" content-id="main">
+        <ion-content>
+            <deckgo-chapters></deckgo-chapters>
+        </ion-content>
+    </ion-menu>
 
-            <button slot="actions" style="color: inherit; outline: none; background: transparent; border-color: transparent; font-size: 1.6rem;"><ion-icon src="{{DECKDECKGO_BASE_HREF}}assets/icons/ionicons/more.svg" aria-label="More options"></ion-icon></button>
+    <div class="ion-page" id="main">
+        <ion-header>
+            <ion-toolbar color="dark">
+                <ion-buttons slot="start">
+                    <ion-menu-button></ion-menu-button>
+                </ion-buttons>
+                <ion-title>{{DECKDECKGO_TITLE}}</ion-title>
+                <ion-buttons slot="end">
+                    <ion-button id="deckMenu"><ion-icon src="{{DECKDECKGO_BASE_HREF}}assets/icons/ionicons/ellipsis-vertical"></ion-icon></ion-button>
+                </ion-buttons>
+            </ion-toolbar>
+        </ion-header>
 
-        </deckgo-deck>
+        <ion-content force-overscroll="false" style="position: relative; --overflow: hidden;">
+            <deckgo-deck id="slider" embedded="true">
 
-        <deckgo-remote></deckgo-remote>
+            </deckgo-deck>
 
-    </ion-content>
+            <deckgo-remote></deckgo-remote>
 
-    <ion-fab vertical="bottom" horizontal="end" slot="fixed" id="navigation">
-        <button id="play" class="navigation ion-activatable" style="display: none;">
-            <ion-ripple-effect></ion-ripple-effect>
-            <ion-icon src="{{DECKDECKGO_BASE_HREF}}assets/icons/ionicons/play.svg" aria-label="Play video" style="font-size: 1.4em;"></ion-icon>
-        </button>
+            <button id="previous" class="navigation ion-activatable">
+                <ion-ripple-effect></ion-ripple-effect>
+                <ion-icon src="{{DECKDECKGO_BASE_HREF}}assets/icons/ionicons/chevron-back.svg" aria-label="Previous slide"></ion-icon>
+            </button>
 
-        <button id="pause" class="navigation ion-activatable" style="display: none;">
-            <ion-ripple-effect></ion-ripple-effect>
-            <ion-icon src="{{DECKDECKGO_BASE_HREF}}assets/icons/ionicons/pause.svg" aria-label="Pause video" style="font-size: 1.4em;"></ion-icon>
-        </button>
+            <button id="next" class="navigation ion-activatable">
+                <ion-ripple-effect></ion-ripple-effect>
+                <ion-icon src="{{DECKDECKGO_BASE_HREF}}assets/icons/ionicons/chevron-forward.svg" aria-label="Next slide"></ion-icon>
+            </button>
 
-        <button id="previous" class="navigation ion-activatable" aria-label="Previous slide">
-            <ion-ripple-effect></ion-ripple-effect>
-            <ion-icon src="{{DECKDECKGO_BASE_HREF}}assets/icons/ionicons/arrow-back.svg" aria-label="Previous slide" style="font-size: 1.4em;"></ion-icon>
-        </button>
+        </ion-content>
+    </div>
 
-        <button id="next" class="navigation ion-activatable" aria-label="Next slide">
-            <ion-ripple-effect></ion-ripple-effect>
-            <ion-icon src="{{DECKDECKGO_BASE_HREF}}assets/icons/ionicons/arrow-forward.svg" aria-label="Next slide" style="font-size: 1.4em;"></ion-icon>
-        </button>
-
+    <ion-fab vertical="top" horizontal="end" slot="fixed" id="navigation">
         <button id="slidePicker" class="navigation ion-activatable" aria-label="Jump to a particular slide">
             <ion-ripple-effect></ion-ripple-effect>
-            <ion-icon src="{{DECKDECKGO_BASE_HREF}}assets/icons/ionicons/list.svg" aria-label="Jump to a particular slide" style="font-size: 1.4em;"></ion-icon>
+            <ion-icon src="{{DECKDECKGO_BASE_HREF}}assets/icons/ionicons/list.svg" aria-label="Jump to a particular slide"></ion-icon>
         </button>
 
         <button id="fullScreen" class="navigation ion-activatable hide-on-mobile" aria-label="Full screen">
             <ion-ripple-effect></ion-ripple-effect>
-            <ion-icon src="{{DECKDECKGO_BASE_HREF}}assets/icons/ionicons/expand.svg" aria-label="Full screen" style="font-size: 1.4em;"></ion-icon>
+            <ion-icon src="{{DECKDECKGO_BASE_HREF}}assets/icons/ionicons/contract.svg" aria-label="Exit full screen"></ion-icon>
         </button>
 
         <button id="remote" class="navigation ion-activatable">
             <ion-ripple-effect></ion-ripple-effect>
-            <ion-icon src="{{DECKDECKGO_BASE_HREF}}assets/icons/ionicons/phone-portrait.svg" aria-label="Open Remote" style="font-size: 1.4em;"></ion-icon>
+            <ion-icon src="{{DECKDECKGO_BASE_HREF}}assets/icons/ionicons/phone-portrait.svg" aria-label="Open Remote"></ion-icon>
         </button>
     </ion-fab>
 
