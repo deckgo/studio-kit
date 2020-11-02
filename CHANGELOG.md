@@ -1,3 +1,9 @@
+# 7.0.0
+
+### Breaking Changes
+
+- new look with more app components
+
 # 6.2.0
 
 ### Refactoring
