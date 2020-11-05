@@ -10,6 +10,11 @@ import {initReload, initButtons, initFullscreen, initActions, postLoading, initR
 import { defineCustomElements as ionicElements } from '@ionic/core/loader';
 ionicElements();
 
+import {setupConfig} from '@ionic/core';
+setupConfig({
+    menuIcon: '{{DECKDECKGO_BASE_HREF}}assets/icons/ionicons/menu.svg',
+});
+
 // Init DeckDeckGo elements
 import { defineCustomElements as deckDeckGoElements } from '@deckdeckgo/core/dist/loader';
 
