@@ -1,3 +1,13 @@
+# 7.0.1
+
+### Features
+
+- improve lazy loading
+
+### Fix
+
+- remote request popover position
+
 # 7.0.0
 
 ### Breaking Changes
