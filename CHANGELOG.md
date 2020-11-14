@@ -1,3 +1,10 @@
+# 7.1.0
+
+### Features
+
+- selectable text and clickable links
+- add markdown component
+
 # 7.0.1
 
 ### Features
