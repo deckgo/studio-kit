@@ -1,3 +1,9 @@
+# 7.1.1
+
+### Style
+
+- improve markdown style inheritance
+
 # 7.1.0
 
 ### Features
