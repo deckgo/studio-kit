@@ -1,3 +1,9 @@
+# 7.1.2
+
+### Features
+
+- update markdown and code to unleash these in our editor
+
 # 7.1.1
 
 ### Style
