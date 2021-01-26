@@ -1,5 +1,9 @@
 # 7.2.0
 
+### Features
+
+- add CDN to CSP
+
 ### Build
 
 - update dependencies
