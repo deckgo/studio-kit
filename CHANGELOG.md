@@ -1,3 +1,9 @@
+# 7.2.0
+
+### Build
+
+- update dependencies
+
 # 7.1.3
 
 ### Build
