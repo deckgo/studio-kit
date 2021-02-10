@@ -12,7 +12,7 @@ ionicElements();
 
 import {setupConfig} from '@ionic/core';
 setupConfig({
-    menuIcon: '{{DECKDECKGO_BASE_HREF}}assets/icons/ionicons/menu.svg',
+    menuIcon: 'https://deckdeckgo.com/assets/icons/ionicons/menu.svg',
 });
 
 // Init DeckDeckGo elements
