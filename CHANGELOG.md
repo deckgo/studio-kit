@@ -1,3 +1,9 @@
+# 7.2.1
+
+### Fix
+
+- support custom templates name
+
 # 7.2.0
 
 ### Features
