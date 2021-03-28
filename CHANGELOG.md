@@ -1,3 +1,13 @@
+# 8.0.0
+
+### Features
+
+- display presentation in a 16/9 container if windowed and not `papyrus`
+
+### Refactor
+
+- fullscreen options container renamed from `navigation` to `fullscreen-menu`
+
 # 7.2.1
 
 ### Fix

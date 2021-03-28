@@ -135,9 +135,11 @@
         </ion-header>
 
         <ion-content force-overscroll="false" style="position: relative; --overflow: hidden;">
-            <deckgo-deck id="slider" embedded="true">
+            <main>
+                <deckgo-deck id="slider" embedded="true">
 
-            </deckgo-deck>
+                </deckgo-deck>
+            </main>
 
             <deckgo-remote></deckgo-remote>
 
@@ -154,7 +156,7 @@
         </ion-content>
     </div>
 
-    <ion-fab vertical="top" horizontal="end" slot="fixed" id="navigation">
+    <ion-fab vertical="top" horizontal="end" slot="fixed" id="fullscreen-menu">
         <button id="slidePicker" class="navigation ion-activatable" aria-label="Jump to a particular slide">
             <ion-ripple-effect></ion-ripple-effect>
             <ion-icon src="{{DECKDECKGO_BASE_HREF}}assets/icons/ionicons/list.svg" aria-label="Jump to a particular slide"></ion-icon>
