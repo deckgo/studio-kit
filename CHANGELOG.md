@@ -1,3 +1,9 @@
+# 8.0.1
+
+### Fix
+
+- screenshot full size
+
 # 8.0.0
 
 ### Features
