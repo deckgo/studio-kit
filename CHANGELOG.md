@@ -1,3 +1,13 @@
+# 8.1.0
+
+### Features
+
+- laser pointer on fullscreen presenting
+
+### Fix
+
+- fullscreen size and mouse inactivity
+
 # 8.0.1
 
 ### Fix
