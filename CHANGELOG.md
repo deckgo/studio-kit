@@ -1,3 +1,9 @@
+# 8.2.0
+
+### Build
+
+- bump dependencies including DeckDeckGo "`esm` libraries"
+
 # 8.1.0
 
 ### Features
