@@ -1,3 +1,9 @@
+# 8.3.0
+
+### Build
+
+- update dependencies with new `slide-utils` for `deckgo-highlight-code` animation
+
 # 8.2.0
 
 ### Build
