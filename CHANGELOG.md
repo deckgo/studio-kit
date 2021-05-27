@@ -1,3 +1,9 @@
+# 8.3.1
+
+### Fix
+
+- no reveal / animation of `@deckgo/highlight-code` if no lines to highlight
+
 # 8.3.0
 
 ### Build
