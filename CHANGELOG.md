@@ -1,3 +1,9 @@
+# 8.3.2
+
+### Build
+
+- bump dependencies
+
 # 8.3.1
 
 ### Fix
